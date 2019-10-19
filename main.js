@@ -1,5 +1,5 @@
+// Creating the divs
 const container = document.querySelector('.container');
-
 function createDiv(num){
     for (i=0; i<num; i++){
         let i = document.createElement('div');
@@ -10,17 +10,15 @@ function createDiv(num){
 }
 createDiv(256);
 
+// Adding the eventListener to the divs
 const box = document.querySelectorAll('.box');
-
 function addEvent(item, event, func){
     for(i=0;i<item.length;i++){
         item[i].addEventListener(event, func, false);
     };
 };
-
 function colorChange(){
     this.style.backgroundColor = 'black'; 
 }
-
 addEvent(box, 'mouseenter', colorChange);
 
