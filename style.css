@@ -1,3 +1,7 @@
+html{
+    cursor: crosshair;
+}
+
 
 .container{
     display: grid;
@@ -5,10 +9,24 @@
     grid-auto-rows: 83px;
 }
 
-/*.box:hover{
-    background-color: black;
-}*/
+.btn-group button{
+    background-color: blue;
+    color: white;
+    padding: 5px 25px;
+    cursor: pointer;
+    float: top;
+    margin-top: 5px;
+    font-size: 20px;
+    display: table-header-group;
+    width: fit-content;
+}
 
-.hover{
-    background-color: black;
+#clearScreen{
+    width: 33.3%;
+}
+#screenSize{
+    width: 33.3%;
+}
+#colorScreen{
+    width: 33.3%;
 }
