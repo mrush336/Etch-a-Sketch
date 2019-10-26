@@ -14,19 +14,17 @@ html{
     color: white;
     padding: 5px 25px;
     cursor: pointer;
-    float: top;
     margin-top: 5px;
     font-size: 20px;
     display: table-header-group;
-    width: fit-content;
 }
 
 #clearScreen{
-    width: 33.3%;
+    width: 33.0%;
 }
 #screenSize{
-    width: 33.3%;
+    width: 33.0%;
 }
-#colorScreen{
-    width: 33.3%;
+#lineColor{
+    width: 33.0%;
 }
