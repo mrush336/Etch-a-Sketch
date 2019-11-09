@@ -1,3 +1,4 @@
+
 // Creating the divs
 const container = document.querySelector('.container');
 function createDiv(num){
@@ -31,10 +32,14 @@ function clearScreen(){
 }
 
 function screenSize(){
-    let input = prompt('Enter a size:');
-    let output = createDiv(input);
-    return output;
-
+    const squares = document.querySelectorAll('.box');
+    squares.forEach(function(e){
+        e.remove();
+    })
+    const userChoice = prompt('Enter the number of squares:\nNote: 256 is the default');
+    createDiv(userChoice);
+    const box = document.querySelectorAll('.box');
+    addEvent(box, 'mouseenter', colorChange);
 }
 
 function lineColor(){
