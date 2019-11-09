@@ -5,7 +5,7 @@ function createDiv(num){
     for (i=0; i<num; i++){
         let i = document.createElement('div');
         i.classList.add('box');
-        i.textContent = ('box');
+        //i.textContent = ('box');
         container.appendChild(i);
     }
 }
@@ -18,12 +18,15 @@ function addEvent(item, event, func){
         item[i].addEventListener(event, func, true);
     };
 };
+//Defineing the color change function
+var color = 'black';
 function colorChange(){
-    this.style.backgroundColor = 'black'; 
+    this.style.backgroundColor = `${color}`; 
 }
 addEvent(box, 'mouseenter', colorChange);
 
-// Button function creation
+// Button function creation, user interaction
+
 function clearScreen(){
     let temp = document.querySelectorAll('.box');
     for(i=0;i<temp.length;i++){
@@ -36,14 +39,12 @@ function screenSize(){
     squares.forEach(function(e){
         e.remove();
     })
-    const userChoice = prompt('Enter the number of squares:\nNote: 256 is the default');
+    const userChoice = prompt('Enter the number of squares:\nNote: 256 is the default value');
     createDiv(userChoice);
-    const box = document.querySelectorAll('.box');
+    let box = document.querySelectorAll('.box');
     addEvent(box, 'mouseenter', colorChange);
 }
 
 function lineColor(){
-    let color = prompt('Select a color:');
-
-
+    color = prompt('Select a color:\nPlease use basic names');
 }
